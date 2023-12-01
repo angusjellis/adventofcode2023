@@ -49,10 +49,7 @@ class StringSummariser:
                 last_num = char
             elif self.use_valid_string_digits:
                 matching_values = self.valid_string_digits.get(char)
-
                 if matching_values is not None:
-
-                    print(line, matching_values, char, i)
                     matching_chars = 0
                     for key, value in matching_values.items():
                         current_index = i
@@ -66,7 +63,6 @@ class StringSummariser:
                                 print(f"Matching string is now {matching_string}")
                                 matching_chars += 1
                                 current_index += 1
-
                                 if len(key) == matching_chars:
                                     print(f"Found matching value {key}")
                                     print(line, value)
