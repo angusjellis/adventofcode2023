@@ -3,14 +3,26 @@ import sys
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
+
 class StringSummariser:
     """
     Class to summarise a string
     """
+
     def __init__(self, filename: str):
-        with open(filename, 'r') as f:
+        with open(filename, "r") as f:
             self.string = f.read()
-            print(self.string)
+            self.valid_string_digits = [
+                "one",
+                "two",
+                "three",
+                "four",
+                "five",
+                "six",
+                "seven",
+                "eight",
+                "nine",
+            ]
 
     def get_sum(self) -> int:
         """
@@ -35,14 +47,15 @@ class StringSummariser:
                 last_num = char
         combined_num = first_num + last_num
         return int(combined_num)
-        
+
 
 def main():
-    filename = input('Enter filename: ')
+    filename = input("Enter filename: ")
     if not os.path.isabs(filename):
         filename = os.path.join(os.path.dirname(__file__), filename)
     summariser = StringSummariser(filename=filename)
     print(summariser.get_sum())
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()
