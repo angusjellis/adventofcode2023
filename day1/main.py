@@ -52,9 +52,9 @@ class StringSummariser:
                 if matching_values is not None:
                     matching_chars = 0
                     for key, value in matching_values.items():
-                        current_index = i
+                        current_index = i + 1
                         matching_string = ""
-                        for char in key:
+                        for char in key[1:]:
                             if current_index >= len(line):
                                 break
                             if char == line[current_index]:
