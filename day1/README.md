@@ -32,3 +32,8 @@ zoneight234
 In this example, the calibration values are 29, 83, 13, 24, 42, 14, and 76. Adding these together produces 281.
 
 What is the sum of all of the calibration values?
+
+
+# NOTES:
+
+Part 1 was pretty simple to do, but part 2 was more complicated. I ended up doing a relatively naive pattern search, which I sped up a little by using a hashmap. I only triggered the naive pattern search if the character matched the first character of one of the 'digits'. I could probably have sped it up further by doing some more magic on the hashmap, but it worked quickly enough for my purposes.
