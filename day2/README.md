@@ -51,3 +51,5 @@ For each game, find the minimum set of cubes that must have been present. What i
 # Notes:
 
 My code for this one was a bit dirtier than day 1, but I think the challenge was easier once you figure out how exactly to split the strings. I'm sure there's a cleverer way of doing it in python than this, but it worked for my purposes.
+
+Reading back on the challenges, I've now realised that there was absolutely no need to look at each 'reveal' individually - I could have just kept a counter going for red, green, and blue. Oops!
