@@ -32,9 +32,7 @@ class GameSummariser:
                 reveal = reveal.split(",")
                 for r in reveal:
                     r = r.strip()
-                    print(r)
                     number, colour = r.split(" ")
-                    print(colour, number)
                     number = int(number)
                     if colour == "green":
                         if number > green_max:
@@ -61,7 +59,6 @@ class GameSummariser:
         red_max = 12
         blue_max = 14
         green_max = 13
-        possible_games = 0
         for reveals in games.values():
             reveals["possible"] = False
             if (
@@ -69,7 +66,6 @@ class GameSummariser:
                 and reveals["blue"] <= blue_max
                 and reveals["green"] <= green_max
             ):
-                possible_games += 1
                 reveals["possible"] = True
         return games
 
